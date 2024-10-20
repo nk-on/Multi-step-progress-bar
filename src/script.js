@@ -6,13 +6,34 @@ function increaseProgressLine() {
   let idx = 0;
   return () => {
     const currWidth = lineElement.computedStyleMap().get('width').value;
-    if (currWidth + 25 >= 110) return;
+    if (idx === progressBars.length - 1){
+        idx = 0;
+        return;
+    }
     idx++;
     progressBars[idx].style.backgroundColor = '#05ffc3';
     lineElement.style.width = `${currWidth + 25}%`;
   };
 }
+function decreaseProgressLine() {
+  let idx = progressBars.length - 1;
+  return () => {
+    const currWidth = lineElement.computedStyleMap().get('width').value;
+    if (idx === 0) {
+      idx = progressBars.length - 1;
+      return;
+    }
+    progressBars[idx].style.backgroundColor = '#fff';
+    idx--;
+    lineElement.style.width = `${currWidth - 25}%`;
+  };
+}
 const increaseProgress = increaseProgressLine();
+const decreaseProgress = decreaseProgressLine();
 nextButton.addEventListener('click', () => {
   increaseProgress();
+});
+prevButton.addEventListener('click', () => {
+  console.log('i work');
+  decreaseProgress();
 });
