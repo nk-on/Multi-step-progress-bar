@@ -41,6 +41,7 @@ body {
     left: 3%;
     height: 2px;
     width: 20%;
+    transition: width 1s ease;
     @include setBg($element-color)
   }
   .container {
