@@ -15,8 +15,19 @@ body {
   padding: 100px 50px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.progress-bars .line {
+  z-index: 1;
+  position: absolute;
+  height: 2px;
+  width: 94%;
+  left: 3%;
+  top: 17%;
+  background-color: #fff;
 }
 .progress-bars .progress-bar {
+  z-index: 2;
   border-radius: 50%;
   width: 30px;
   height: 30px;
