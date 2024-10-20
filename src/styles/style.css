@@ -27,4 +27,16 @@ body {
   background-color: #fff;
 }
 
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+.buttons button {
+  border: none;
+  margin: 0 10px;
+  padding: 10px 30px;
+  background-color: #fff;
+}
+
 /*# sourceMappingURL=style.css.map */

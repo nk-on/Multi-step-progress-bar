@@ -39,3 +39,14 @@ body {
     @include setBg($-element-color);
   }
 }
+.buttons{
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  button{
+    border: none;
+    margin: 0 10px;
+    padding: 10px 30px;
+    @include setBg($-element-color);
+  }
+}
