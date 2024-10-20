@@ -34,6 +34,5 @@ nextButton.addEventListener('click', () => {
   increaseProgress();
 });
 prevButton.addEventListener('click', () => {
-  console.log('i work');
   decreaseProgress();
 });
