@@ -1,28 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-$-bg-color:#000;
-$-element-color:#fff;
+$-bg-color: #000;
+$-element-color: #fff;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-@mixin setBg($color){
-    background-color: $color;
+
+@mixin setBg($color) {
+  background-color: $color;
 }
-@mixin centerDiv(){
-    display: flex;
-    justify-content: center;
-    align-items: center
+
+@mixin centerDiv() {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+@mixin alignContainer(){
+  display: flex;
+  justify-content: space-between;
 }
 body {
   @include setBg($-bg-color);
   font-family: 'Roboto', sans-serif;
 }
-.progress-bar{
+
+.progress-bars {
+   width: 100%;
+   padding: 100px 50px;
+   @include alignContainer();
+  .progress-bar {
     border-radius: 50%;
     width: 30px;
     height: 30px;
     cursor: pointer;
     @include centerDiv();
     @include setBg($-element-color);
+  }
 }
