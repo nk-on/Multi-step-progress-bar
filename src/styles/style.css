@@ -11,19 +11,23 @@ body {
 }
 
 .progress-bars {
+  position: relative;
   width: 100%;
-  padding: 100px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .progress-bars .line {
   z-index: 1;
   position: absolute;
+  top: 50%;
+  left: 3%;
   height: 2px;
   width: 20%;
-  left: 3%;
   background-color: #fff;
+}
+.progress-bars .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 50px;
 }
 .progress-bars .progress-bar {
   z-index: 2;
@@ -35,6 +39,9 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #fff;
+}
+.progress-bars .progress-bar:first-child {
+  background-color: #05ffc3;
 }
 
 .buttons {
